@@ -76,5 +76,6 @@ for file in flatten_files:
             song.tags["GENRE"]=newGenre
             ret=song.save()
             print("Set to new genre ")
+            print(', '.join(newGenre))
         except:
             print("Could not save file!")
