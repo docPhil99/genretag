@@ -37,7 +37,7 @@ for key,value in args.iteritems():
         if key is not 'name' and key is not 'recursive':
             newGenre.append(key)
 print newGenre
-extList=('.flac','.mp3','.m4a')
+extList=('.flac','.mp3','.m4a','.aiff')
 print len(sys.argv)
 path=args['name']
 files=[]
