@@ -7,7 +7,8 @@ import os
 import sys
 import taglib
 import argparse
-import fnmatch
+#import fnmatch
+import re
 parser=argparse.ArgumentParser(description="Changes the genre tags of the music in a give directoy. If no options are given it prints the existing tags")
 parser.add_argument('name',help='directory of music to change. ')
 #the optional genre tags
@@ -39,23 +40,27 @@ for key,value in args.iteritems():
         if key is not 'name' and key is not 'recursive':
             newGenre.append(key)
 print(newGenre)
-extList=('.flac','.mp3','.m4a','.aiff')
+#extList=('.flac','.mp3','.m4a','.aiff')
+re_extList='.flac$|.mp3$|.m4a$|.aiff$'
 path=args['name']
 files=[]
 if not args['recursive']:
     print("Scanning...")
-    for ext in extList:
-        fs=os.path.join(path,'*'+ext)
-        print(fs)
-        files.append(glob.glob(fs))
-        flatten_files=[y for x in files for y in x]
+    for filename in os.listdir(path):
+        if bool(re.search(re_extList,filename,re.I)):
+            files.append(os.path.join(path,filename))
+#    for ext in extList:
+#        fs=os.path.join(path,'*'+ext)
+#        print(fs)
+#        files.append(glob.glob(fs))
+#        flatten_files=[y for x in files for y in x]
 
 else:
     for root, dirnames, filenames in os.walk(path):
         for filename in filenames:
-            if filename.endswith(extList):
+            if bool(re.search(re_extList,filename,re.I)):
                 files.append(os.path.join(root, filename))
-    flatten_files=files
+flatten_files=files
 #assert len(flatten_files)>0, "No supported media files found"
 if len(flatten_files)==0:
     sys.exit("No supported media file found")
