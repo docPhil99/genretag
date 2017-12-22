@@ -61,28 +61,33 @@ print(newGenre)
 re_extList='.flac$|.mp3$|.m4a$|.aiff$'
 path=args['name']
 files=[]
-if not args['recursive']:
-    print("Scanning...")
-    for filename in os.listdir(path):
-        if bool(re.search(re_extList,filename,re.I)):
-            files.append(os.path.join(path,filename))
-            if args['info']:
-                print_info(files[-1])
-            
-#    for ext in extList:
-#        fs=os.path.join(path,'*'+ext)
-#        print(fs)
-#        files.append(glob.glob(fs))
-#        flatten_files=[y for x in files for y in x]
-
-else:
-    for root, dirnames, filenames in os.walk(path):
-        for filename in filenames:
+if os.path.isdir(path):
+    if not args['recursive']:
+        print("Scanning...")
+        for filename in os.listdir(path):
             if bool(re.search(re_extList,filename,re.I)):
-                files.append(os.path.join(root, filename))
+                files.append(os.path.join(path,filename))
                 if args['info']:
                     print_info(files[-1])
                 
+    #    for ext in extList:
+    #        fs=os.path.join(path,'*'+ext)
+    #        print(fs)
+    #        files.append(glob.glob(fs))
+    #        flatten_files=[y for x in files for y in x]
+    
+    else:
+        for root, dirnames, filenames in os.walk(path):
+            for filename in filenames:
+                if bool(re.search(re_extList,filename,re.I)):
+                    files.append(os.path.join(root, filename))
+                    if args['info']:
+                        print_info(files[-1])
+else:
+#must be a file
+    files=[path]
+    if args['info']:
+        print_info(files[-1])
 flatten_files=files
 #assert len(flatten_files)>0, "No supported media files found"
 if len(flatten_files)==0:
