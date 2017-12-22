@@ -36,13 +36,18 @@ parser.add_argument('-j','--Jazz',action='store_true')
 parser.add_argument('-r','--PopRock',action='store_true')
 parser.add_argument('-x','--Christmas',action='store_true')
 parser.add_argument('-m','--Minimalist',action='store_true')
+parser.add_argument('-w','--World',action='store_true')
+
 parser.add_argument('-E','--Early',action='store_true')
+
 parser.add_argument('-B','--Baroque',action='store_true')
 parser.add_argument('-RO','--Romantic',action='store_true')
 parser.add_argument('-C','--Classical',action='store_true')
 parser.add_argument('-N','--Nationalistic',action='store_true')
 parser.add_argument('-MO','--Modern',action='store_true')
 parser.add_argument('--Misc',action='store_true')
+
+
 parser.add_argument('--named',nargs=1,action='store',help='user specified NAME genre tag')
 parser.add_argument('-I','--info',action='store_true', help='print tags of first track and exit')
 args=vars(parser.parse_args())
