@@ -40,6 +40,7 @@ parser.add_argument('-w','--World',action='store_true')
 
 parser.add_argument('-E','--Early',action='store_true')
 
+parser.add_argument('-l','--Lieder',action='store_true')
 parser.add_argument('-B','--Baroque',action='store_true')
 parser.add_argument('-RO','--Romantic',action='store_true')
 parser.add_argument('-C','--Classical',action='store_true')
