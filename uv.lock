@@ -1,0 +1,40 @@
+version = 1
+revision = 3
+requires-python = ">=3.10"
+
+[[package]]
+name = "genretag"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "pytaglib" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pytaglib", specifier = "==2.1.0" }]
+
+[[package]]
+name = "pytaglib"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0d/7b/098bbdf3e2a6158d7027e62615d40593dc4bdb4d0ab5c7c5bfb9c7fc57e1/pytaglib-2.1.0.tar.gz", hash = "sha256:6b0e1a2d0602a9c457254c2e0fe72063ddb205d2a7fd283bf912e4e7bcca48af", size = 500281, upload-time = "2023-11-17T17:45:37.016Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e6/f9/94ad107d964a602fed8e88926203e76fc074404377cd518efef5198ddccb/pytaglib-2.1.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:599a15ede4b80c8a35549993f44eddf05579d0915c51d2b98a6ff5e3c1294767", size = 634744, upload-time = "2023-11-17T17:44:42.533Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/3c/4f59d4a571609e6f626463f1160d6ac01f639ea9a6b48f09eabf208b4eeb/pytaglib-2.1.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:33f54db28a6f78ecd502680c3a34366ce7fbda76736a048a270c5b92760a516f", size = 57732, upload-time = "2023-11-17T17:44:44.543Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/af/1699e20aa186601a25df8fc02cee72393bf5e79beece06a7c854a7db15eb/pytaglib-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0d96563998fb88ca60f9b897d819323014b27f431d925bff13085912e63ecefa", size = 949667, upload-time = "2023-11-17T17:44:45.686Z" },
+    { url = "https://files.pythonhosted.org/packages/4b/2d/c4237c8968d254220d7d04e53540ed09a343c0f3ded821ddeee596d09a9f/pytaglib-2.1.0-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:7260f346f519600662e7324f3a02fdc8a7eeb8a85b938a8136fcfd79918f684b", size = 1474040, upload-time = "2023-11-17T17:44:47.376Z" },
+    { url = "https://files.pythonhosted.org/packages/2c/a0/cbdf73aaa5f65718c9fb7f680ac4cb39c824a19b754b1a8ed6358d799e7a/pytaglib-2.1.0-cp310-cp310-win_amd64.whl", hash = "sha256:d02fe61117468b6742b91b3a64718a6e12ce8aab5084ab2d6505696a72303a56", size = 236896, upload-time = "2023-11-17T17:44:49.235Z" },
+    { url = "https://files.pythonhosted.org/packages/49/a2/4d509fc21e302739c3efef98d91658c595778082e16cce854bc611784f80/pytaglib-2.1.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:bb386541200fc74c07100e1555720311aa8fe8aa953a9d6a2884e77290a3e685", size = 634891, upload-time = "2023-11-17T17:44:50.714Z" },
+    { url = "https://files.pythonhosted.org/packages/49/b6/48204756d7ccb978fc54cda6ee05f93a2c0386a85cb0b3f730cd763bd838/pytaglib-2.1.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:935ce0c1f0f36365eeb931418238ce3c98f89a84f0fec998e6d980ca738d3e39", size = 57789, upload-time = "2023-11-17T17:44:52.163Z" },
+    { url = "https://files.pythonhosted.org/packages/32/24/363c9355ce5df92779bc3976a301a418611741e0aac7a4dbe271fda67710/pytaglib-2.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:376130120b56809262d8524fc15340cae61898c7f3c1f422c053d83c694443b1", size = 971490, upload-time = "2023-11-17T17:44:53.632Z" },
+    { url = "https://files.pythonhosted.org/packages/95/70/f4b57cf0b2a7afb257999883323d332d09119ff868383d1a11bc9a94e65e/pytaglib-2.1.0-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:95e31a70acd9b29905d11b78cf6f8468f7206982710d9c289cd11282b6a260e7", size = 1485036, upload-time = "2023-11-17T17:44:55.254Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/69/f4db0b99fbe1c8ccdb94bcca0aa78225ef7f6554e8d835dea9f31bb523f4/pytaglib-2.1.0-cp311-cp311-win_amd64.whl", hash = "sha256:b824a51097361532eafbd29fe8c74eb7b7db6133108e45ec6ca026c2e5a6ca4a", size = 236965, upload-time = "2023-11-17T17:44:57.035Z" },
+    { url = "https://files.pythonhosted.org/packages/57/54/58d4cdc02b1ce1894e9120e0c7f2c693798b7315931a6e6d4a09149275be/pytaglib-2.1.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:2e79511e3d6efaab20e82457ac0bd433821931fcc6139d257a1d5f997054c9bf", size = 635116, upload-time = "2023-11-17T17:44:58.53Z" },
+    { url = "https://files.pythonhosted.org/packages/f1/4e/bc018754514611c0a7904569cec900a6aa71e977268f8b6f073697ce1279/pytaglib-2.1.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:a8216e5b0d633e88176a043d6449e31d87a5addc890d4618db37b3627c9ba453", size = 57612, upload-time = "2023-11-17T17:44:59.944Z" },
+    { url = "https://files.pythonhosted.org/packages/46/c3/79ca269b6fc319700573db78a0d58bf345e7cc857b95b15e1bcf6fd8ca5c/pytaglib-2.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:19b5ed29bfa0df5c6e39c0466986ef12adea2ba551dac1a24bc9f9100dd87c4e", size = 977728, upload-time = "2023-11-17T17:45:01.464Z" },
+    { url = "https://files.pythonhosted.org/packages/03/b2/2be5bc12e259aaf5f43447273a320c8ce116bb0254bb25c0aa9daf66e77f/pytaglib-2.1.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:793c9f64050da83295c60b06a93b06e86f9e4f3ed39f1f9e902c0b225d568d40", size = 1491029, upload-time = "2023-11-17T17:45:03.18Z" },
+    { url = "https://files.pythonhosted.org/packages/eb/cc/4fb71faf8f5b4b4b627da52128068db1678d6cf02579a81553a02fce9787/pytaglib-2.1.0-cp312-cp312-win_amd64.whl", hash = "sha256:d6bb8b21130bcf56e9084d01fc64e19a022b86117f0a12f520dfdeddcde24fe9", size = 237531, upload-time = "2023-11-17T17:45:04.709Z" },
+    { url = "https://files.pythonhosted.org/packages/55/b0/fe4754c66f5abdc3e8acff40c9e81f061ea292be11d59676620b396b4bcd/pytaglib-2.1.0-pp310-pypy310_pp73-macosx_10_9_x86_64.whl", hash = "sha256:147981520eca554e6f0df21a937aac4ea7020ec2cfb495393018fd34d95db654", size = 627446, upload-time = "2023-11-17T17:45:23.018Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/4b/eb4024417ce1f08ef2e36f9b4d8ead2f3c61f11df696a279a512690544e3/pytaglib-2.1.0-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9a16a84f79398766269ceb8cb4c2eebec49135e3b1088e727014cfd3650a9586", size = 696983, upload-time = "2023-11-17T17:45:24.561Z" },
+    { url = "https://files.pythonhosted.org/packages/31/96/f252d6226f360a888cee1d32341a221922e03afcc157f1327ac02f242a6c/pytaglib-2.1.0-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:1024de35533ef09234daf1b5781ae604362e20c6b273a5bbdb10213eb2b1bff8", size = 233444, upload-time = "2023-11-17T17:45:25.992Z" },
+]
