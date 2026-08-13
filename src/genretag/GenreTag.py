@@ -55,7 +55,7 @@ def main():
     args=vars(parser.parse_args())
     #print(args)
     newGenre=[]
-    for key,value in args.iteritems():
+    for key,value in args.items():
         if value:
             #if key is not 'name' and key is not 'recursive' and key is not 'named':
             if key not in ['name','recursive','named','info']:
@@ -108,8 +108,9 @@ def main():
             continue
         
         if "GENRE" in song.tags.keys():
-             msg = repr([x.encode(sys.stdout.encoding) for x in song.tags["GENRE"]]).decode('string-escape')
-             print("Org. genre tag:"+msg)
+             #msg = repr([x.encode(sys.stdout.encoding) for x in song.tags["GENRE"]]).decode('string-escape')
+             msg = song.tags["GENRE"]
+             print("Org. genre tag:"+"; ".join(msg))
         else:
              print("No tag")
         if len(newGenre)>0:
