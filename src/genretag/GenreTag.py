@@ -44,6 +44,7 @@ def main():
     parser.add_argument('-l','--Lieder',action='store_true')
     parser.add_argument('-B','--Baroque',action='store_true')
     parser.add_argument('-RO','--Romantic',action='store_true')
+    parser.add_argument('-LR','--Late_Romantic',action='store_true')
     parser.add_argument('-C','--Classical',action='store_true')
     parser.add_argument('-N','--Nationalistic',action='store_true')
     parser.add_argument('-MO','--Modern',action='store_true')
@@ -59,6 +60,7 @@ def main():
         if value:
             #if key is not 'name' and key is not 'recursive' and key is not 'named':
             if key not in ['name','recursive','named','info']:
+                key = key.replace("_"," ") # change underscores to spaces
                 newGenre.append(key)
     if args['named'] is not None:
         newGenre.append(args['named'][0])
